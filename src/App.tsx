@@ -5,9 +5,11 @@ import middle from "./assets/middle.png"
 const App = () => {
   return (
     <>
-      <div className="w-full p-2 flex justify-center text-center">
-        <div className="border-red-500 border w-96">
-          <div className=" mt-10 text-2xl">10 / 26</div>
+      <div className="w-full p-2 flex justify-center text-center font-sans">
+        <div className="border-gray-100 border w-96">
+          <div className="font-serif mt-10 text-2xl text-[#0E13E5] font-semibold">
+            10 / 26
+          </div>
           <div className="flex justify-center items-center my-4 gap-4">
             <div className="text-2xl">남세린</div>
             <div className="">그리고</div>
@@ -23,10 +25,10 @@ const App = () => {
           </div>
         </div>
       </div>
-      <div className="mt-10">
+      <div className="mt-10 flex justify-center">
         <img alt="" src={middle} />
       </div>
-      <div className="p-2 text-center bg-gray-100">
+      <div className="p-2 text-center bg-gray-100 font-sans">
         <div className="mt-6 text-lg">
           저희 두 사람 <br />
           좋은 날 결혼합니다.
