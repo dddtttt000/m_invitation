@@ -1,168 +1,46 @@
 import "./App.css"
 // import bg_frame from "../src/assets/bg_frame.png"
 // import Link from "next/link"
-
-function App() {
+import middle from "./assets/middle.png"
+const App = () => {
   return (
-    // <div className="bg-black w-full h-svh flex justify-center">
-    //   <div className="w-[400px] bg-white relative">
-    //     <div id="bg" className="flex justify-center">
-    //       <div className="mt-28 text-center">
-    //         <div className="text-xs mb-6 font-thin">YOU ARE INVITED TO THE</div>
-    //         <div className="licorice-regular text-7xl font- text-center">
-    //           Wedding
-    //         </div>
-    //         <div className=" text-2xl text-center lavishly-yours-regular mb-5">
-    //           -of-
-    //         </div>
-    //         <div className=" text-3xl  font-light mb-2">Lin</div>
-    //         <div className=" text-2xl text-center lavishly-yours-regular mb-2">
-    //           and
-    //         </div>
-    //         <div className=" text-3xl  font-light mb-4">Songha</div>
-    //         <div className=" mt-5 text-sm">
-    //           <div className=" font-thin">2024.10.26 (토)</div>
-    //           <div className=" font-thin">오후 12:40</div>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
-    <div className="bg-background text-card-foreground p-6 sm:p-10 flex flex-col items-center justify-center min-h-screen">
-      <div className="bg-card p-8 sm:p-12 rounded-xl w-full max-w-md shadow-lg">
-        <div className="flex flex-col items-center gap-6">
-          <div className="text-4xl sm:text-5xl font-bold">John &amp; Jane</div>
-          <div className="text-2xl sm:text-3xl font-medium">
-            are getting married
+    <>
+      <div className="w-full p-2 flex justify-center text-center">
+        <div className="border-red-500 border w-96">
+          <div className=" mt-10 text-2xl">10 / 26</div>
+          <div className="flex justify-center items-center my-4 gap-4">
+            <div className="text-2xl">남세린</div>
+            <div className="">그리고</div>
+            <div className=" text-2xl">임송하</div>
           </div>
-        </div>
-        <div className="mt-8 grid gap-4">
-          <div className="flex items-center gap-3">
-            <CalendarIcon className="w-6 h-6 text-primary" />
-            <div>
-              <div className="text-lg font-medium">June 10, 2023</div>
-              <div className="text-muted-foreground text-sm">5:00 PM</div>
-            </div>
+
+          <div className="flex justify-center  p-2">
+            <div className="border w-full h-96">사진</div>
           </div>
-          <div className="flex items-center gap-3">
-            <MapPinIcon className="w-6 h-6 text-primary" />
-            <div>
-              <div className="text-lg font-medium">The Willow Garden</div>
-              <div className="text-muted-foreground text-sm">
-                123 Main St, Anytown USA
-              </div>
-            </div>
-          </div>
-          <div className="flex items-center gap-3">
-            <MailIcon className="w-6 h-6 text-primary" />
-            <div>
-              <div className="text-lg font-medium">RSVP by May 1, 2023</div>
-              <div className="text-muted-foreground text-sm">
-                {/* <Link href="#" className="underline" prefetch={false}> */}
-                RSVP Now
-                {/* </Link> */}
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="mt-8 flex justify-center">
-          <div className="relative w-full max-w-[300px]">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary-foreground opacity-10 rounded-xl" />
-            <div className="relative rounded-xl overflow-hidden">
-              {/* <img
-                src="/placeholder.svg"
-                width={600}
-                height={400}
-                alt="Wedding Couple"
-                className="w-full h-auto object-cover"
-              /> */}
-            </div>
+          <div className="space-y-1 text-gray-600 mt-4">
+            <div className="">2024년 10월 26일 토요일 낮 12시 40분</div>
+            <div className="">웨딩 스퀘어 그레이스 홀 4F</div>
           </div>
         </div>
       </div>
-    </div>
-  )
-}
-
-function CalendarIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M8 2v4" />
-      <path d="M16 2v4" />
-      <rect width="18" height="18" x="3" y="4" rx="2" />
-      <path d="M3 10h18" />
-    </svg>
-  )
-}
-
-function MailIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect width="20" height="16" x="2" y="4" rx="2" />
-      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-    </svg>
-  )
-}
-
-function MapPinIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-      <circle cx="12" cy="10" r="3" />
-    </svg>
-  )
-}
-
-function XIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M18 6 6 18" />
-      <path d="m6 6 12 12" />
-    </svg>
+      <div className="mt-10">
+        <img alt="" src={middle} />
+      </div>
+      <div className="p-2 text-center bg-gray-100">
+        <div className="mt-6 text-lg">
+          저희 두 사람 <br />
+          좋은 날 결혼합니다.
+        </div>
+        <div className="mt-6 space-y-2">
+          <div>서로가 마주보며 다져온 사랑을</div>
+          <div>이제 함께 한 곳을 바라보며</div>
+          <div>걸어갈 수 있는 큰 사랑으로 키우고자 합니다.</div>
+          <div>저희 두 사람이 사랑의 이름으로</div>
+          <div>지켜나갈 수 있게 앞날을</div>
+          <div>축복해 주시면 감사하겠습니다.</div>
+        </div>
+      </div>
+    </>
   )
 }
 
