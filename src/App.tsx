@@ -5,6 +5,11 @@ import {
   Marker,
   useNavermaps,
 } from "react-naver-maps"
+import Accordion from "@mui/material/Accordion"
+import AccordionActions from "@mui/material/AccordionActions"
+import AccordionSummary from "@mui/material/AccordionSummary"
+import AccordionDetails from "@mui/material/AccordionDetails"
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 
 const App = () => {
   const navermaps = useNavermaps()
@@ -118,6 +123,48 @@ const App = () => {
                 </NaverMap>
               </MapDiv>
             </div>
+            <div className="text-left px-12">
+              <div className="font-bold">지하철</div>
+              <div className="text-sm">
+                2호선 강변역 1, 2번 출구 지하통로 연결
+              </div>
+              <div className="flex justify-center py-4">
+                <div className="border-b-gray-100 border w-full border-t-0"></div>
+              </div>
+              <div className="font-bold">시내버스</div>
+              <div className="text-sm">
+                마을 : 강동01, 광진01, 광진03, 광진04
+              </div>
+              <div className="text-sm">지선 : 2224. 3214. 3212</div>
+              <div className="text-sm">
+                경기(일반) : 1, 1-1, 1-2. 9. 9-1, 13, 13-2, 15, 91, 92, 93, 95,
+                96, 97, 112, 112-1. 2000-1, 2000-3, 2000-4
+              </div>
+              <div className="text-sm">
+                경기(직행) : 11, 1112. 1113. 1113-1. 1113-2. 1117, 1650. 1660.
+                5600, 5700
+              </div>
+              <div className="text-sm">공항 : 6705</div>
+              <div className="flex justify-center py-4">
+                <div className="border-b-gray-100 border w-full border-t-0"></div>
+              </div>
+              <div className="font-bold">시외 ∙ 고속버스</div>
+              <div className="text-sm">
+                동서울종합터미널 하차 후 강변역 통로 이용(도보 5분)
+              </div>
+              <div className="flex justify-center py-4">
+                <div className="border-b-gray-100 border w-full border-t-0"></div>
+              </div>
+              <div className="font-bold">자가용</div>
+              <div className="text-sm">
+                네비게이션 검색 : 강변테크노마트(광진구 구의동) 또는 강변역 검색
+                강변북로 올림픽대로 이용 : 잠실대교 또는 올림픽대교 교차로 이용
+              </div>
+              <div className="font-bold mt-4">주차</div>
+              <div className="text-sm">
+                강변 테크노마트 지하 주차장 B3, B4층 이용
+              </div>
+            </div>
           </div>
 
           <div className="flex justify-center py-8">
@@ -129,6 +176,43 @@ const App = () => {
             <div>참석이 어려우신 분들을 위해</div>
             <div>계좌번호를 기재하였습니다.</div>
             <div>너그러운 마음으로 양해 부탁 드립니다.</div>
+          </div>
+
+          <div className="pt-8">
+            <div className="px-10">
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1-content"
+                  id="panel1-header"
+                  sx={{ color: "primary.main" }}
+                >
+                  신랑측
+                </AccordionSummary>
+                <AccordionDetails>
+                  <div className="text-left flex justify-between">
+                    <div>계좌번호</div>
+                    <div>복사</div>
+                  </div>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1-content"
+                  id="panel1-header"
+                  sx={{ color: "primary.main" }}
+                >
+                  신부측
+                </AccordionSummary>
+                <AccordionDetails>
+                  <div className="text-left flex justify-between">
+                    <div>계좌번호</div>
+                    <div>복사</div>
+                  </div>
+                </AccordionDetails>
+              </Accordion>
+            </div>
           </div>
         </div>
       </div>

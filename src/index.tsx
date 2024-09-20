@@ -4,12 +4,21 @@ import "./index.css"
 import App from "./App"
 import reportWebVitals from "./reportWebVitals"
 import { NavermapsProvider } from "react-naver-maps"
+import { createTheme, ThemeProvider } from "@mui/material/styles"
 
+const customTheme = createTheme({
+  palette: {
+    background: { default: "#ffffff" },
+    primary: { main: "#0E13E5" },
+  },
+})
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
 root.render(
   <React.StrictMode>
     <NavermapsProvider ncpClientId="a51ubs0ntl">
-      <App />
+      <ThemeProvider theme={customTheme}>
+        <App />
+      </ThemeProvider>
     </NavermapsProvider>
   </React.StrictMode>
 )
