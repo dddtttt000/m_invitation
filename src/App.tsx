@@ -6,7 +6,6 @@ import {
   useNavermaps,
 } from "react-naver-maps"
 import Accordion from "@mui/material/Accordion"
-import AccordionActions from "@mui/material/AccordionActions"
 import AccordionSummary from "@mui/material/AccordionSummary"
 import AccordionDetails from "@mui/material/AccordionDetails"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
@@ -26,10 +25,19 @@ const App = () => {
             <div className="text-[#0E13E5] font-semibold">&</div>
             <div className=" text-2xl">임송하</div>
           </div>
+          {/* <div>우리 결혼 합니다.</div> */}
 
           {/* //ANCHOR - 사진 넣는 부분 */}
           <div className="flex justify-center p-2">
-            <div className="w-full h-[460px] bg-gray-100"></div>
+            <div className="w-full h-[460px] bg-gray-100">
+              <img
+                className="img-filter"
+                src={
+                  "https://private-user-images.githubusercontent.com/79240270/369620126-03215a5d-2479-4ff7-8675-6fffa9025ae7.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjY5MjQzMDIsIm5iZiI6MTcyNjkyNDAwMiwicGF0aCI6Ii83OTI0MDI3MC8zNjk2MjAxMjYtMDMyMTVhNWQtMjQ3OS00ZmY3LTg2NzUtNmZmZmE5MDI1YWU3LmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA5MjElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwOTIxVDEzMDY0MlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTJmZjAwOTI1ODJmOTAwN2ZmNjE0ZTgwMjE4ZDBhMmZhOGU3MjJlYmZhOWZiOTA0NDhmZWE1MmUxOTBjOWYxMWUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.ox52w-99tYMc2NrgthwyZuwTxLHv5LpyFDDensKKLnY"
+                }
+                alt=""
+              />
+            </div>
           </div>
 
           <div className="space-y-1 text-gray-600 mt-8">
