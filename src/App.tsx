@@ -45,9 +45,9 @@ const App = () => {
         </div>
 
         <div className="text-[#0E13E5] text-sm">INVITATION</div>
-        <div className=" text-[#0E13E5] mt-2 font-semibold">
+        {/* <div className=" text-[#0E13E5] mt-2 font-semibold">
           소중한 분들을 초대합니다
-        </div>
+        </div> */}
 
         <div className="mt-12 space-y-2">
           <div>예쁜 예감이 들었다.</div>
@@ -89,7 +89,7 @@ const App = () => {
             <div className="border-b-[#0E13E5] border border-t-0 w-72"></div>
           </div>
           <div className="text-[#0E13E5] text-sm">LOCATION</div>
-          <div className=" text-[#0E13E5] font-semibold ">오시는 길</div>
+          {/* <div className=" text-[#0E13E5] font-semibold ">오시는 길</div> */}
           <div className=" pt-6">
             <div>웨딩 스퀘어 4층, 그레이스 홀</div>
             <div className="text-sm mt-2">서울 광진구 광나루로56길 85</div>
@@ -168,7 +168,7 @@ const App = () => {
           <div className="flex justify-center py-8">
             <div className="border-b-[#0E13E5] border border-t-0 w-72"></div>
           </div>
-          <div className="text-[#0E13E5] text-sm">ACCOUNT</div>
+          {/* <div className="text-[#0E13E5] text-sm">마음 전하실 곳</div> */}
           <div className=" text-[#0E13E5] font-semibold ">마음 전하실 곳</div>
           <div className="font-thin space-y-2 text-sm pt-8">
             <div>참석이 어려우신 분들을 위해</div>
@@ -206,12 +206,12 @@ const App = () => {
                 <AccordionDetails>
                   <div className="text-left flex justify-between">
                     <div>계좌번호</div>
-                    <div>복사</div>
+                    <div onClick={(e) => console.log(e)}>복사</div>
                   </div>
                 </AccordionDetails>
               </Accordion>
             </div>
-            <div className="p-2 mb-10">
+            <div className="p-2 mb-10 mt-10">
               <img className="mt-4" src={rearImg} alt="" />
             </div>
           </div>
