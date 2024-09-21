@@ -9,7 +9,10 @@ import Accordion from "@mui/material/Accordion"
 import AccordionSummary from "@mui/material/AccordionSummary"
 import AccordionDetails from "@mui/material/AccordionDetails"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
-
+import calendar from "./assets/calendar.png"
+import frontImg from "./assets/IMG_3625 2 (1).png"
+import rearImg from "./assets/IMG_3621.png"
+import middleImg from "./assets/IMG_3619 (1).png"
 const App = () => {
   const navermaps = useNavermaps()
 
@@ -17,25 +20,14 @@ const App = () => {
     <>
       <div className="w-full p-2 flex justify-center text-center nanum-myeongjo-regular">
         <div className="border-gray-100  w-96">
-          <div className=" mt-10 text-2xl text-[#0E13E5] gowun-batang-bold">
-            10 / 26
-          </div>
-          <div className="flex justify-center items-center my-6 gap-6 nanum-myeongjo-regular">
-            <div className="text-2xl ">남세린</div>
-            <div className="text-[#0E13E5] font-semibold">&</div>
-            <div className=" text-2xl">임송하</div>
-          </div>
           {/* <div>우리 결혼 합니다.</div> */}
 
           {/* //ANCHOR - 사진 넣는 부분 */}
-          <div className="flex justify-center p-2">
-            <div className="w-full h-[460px] bg-gray-100">
-              <img
-                className="img-filter"
-                src="https://private-user-images.githubusercontent.com/79240270/369620126-03215a5d-2479-4ff7-8675-6fffa9025ae7.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjY5MjQ3ODQsIm5iZiI6MTcyNjkyNDQ4NCwicGF0aCI6Ii83OTI0MDI3MC8zNjk2MjAxMjYtMDMyMTVhNWQtMjQ3OS00ZmY3LTg2NzUtNmZmZmE5MDI1YWU3LmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA5MjElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwOTIxVDEzMTQ0NFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQ3ZmIwYzA1YzIzMDc4NGYyZjQ4ODMyZTc2NjQzMzM0NDM3MTJlYThjN2JjMzk1MmFhZTc4M2UzZmFhMmQ2NjAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.HwsYCkwjtpnjVi6goRQDYiUUYX8gqX20JcXxqH74714"
-                alt=""
-              />
-            </div>
+          <img className="mt-4" src={frontImg} alt="" />
+          <div className="flex justify-center items-center my-8 gap-6 nanum-myeongjo-regular">
+            <div className="text-2xl w-full text-right">Selin</div>
+            <div className=" font-semibold w-10">&</div>
+            <div className=" text-2xl w-full text-left">Songha</div>
           </div>
 
           <div className="space-y-1 text-gray-600 mt-8">
@@ -62,9 +54,9 @@ const App = () => {
           <div>우리는 언제나 손을 잡고 있게 될 것이다.</div>
           <div className="pt-3 text-sm">- 이이체, 〈연인〉 中 -</div>
 
-          <div className="py-8">우리의 설레는 첫걸음을 함께 빛내주세요.</div>
+          <div className="py-10">우리의 설레는 첫걸음을 함께 빛내주세요.</div>
 
-          <div className="space-y-2">
+          <div className="space-y-3">
             <div className="font-semibold flex justify-center">
               남기수 <span className="font-normal mx-1">∙</span> 조은경
               <span className="font-normal ml-1">의</span>
@@ -82,15 +74,15 @@ const App = () => {
           </div>
 
           <div className="">
-            <div>
-              <div className="text-lg">2024. 10. 26</div>
-              <div>토요일 낮 12시 40분</div>
-            </div>
+            <div className="text-lg">10월</div>
 
-            <div className="flex justify-center py-2 mt-4">
-              <div className="border-b-gray-100 border w-72 border-t-0"></div>
+            <div className="p-10">
+              <img src={calendar} alt="" />
             </div>
-            <div>달력 이미지</div>
+          </div>
+
+          <div className="p-2">
+            <img className="mt-4" src={middleImg} alt="" />
           </div>
 
           <div className="flex justify-center py-8">
@@ -218,6 +210,9 @@ const App = () => {
                   </div>
                 </AccordionDetails>
               </Accordion>
+            </div>
+            <div className="p-2 mb-10">
+              <img className="mt-4" src={rearImg} alt="" />
             </div>
           </div>
         </div>
