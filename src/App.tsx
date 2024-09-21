@@ -6,11 +6,10 @@ import {
   useNavermaps,
 } from "react-naver-maps"
 import Accordion from "@mui/material/Accordion"
-import AccordionActions from "@mui/material/AccordionActions"
 import AccordionSummary from "@mui/material/AccordionSummary"
 import AccordionDetails from "@mui/material/AccordionDetails"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
-
+import mainImg from "./assets/main.png"
 const App = () => {
   const navermaps = useNavermaps()
 
@@ -26,10 +25,13 @@ const App = () => {
             <div className="text-[#0E13E5] font-semibold">&</div>
             <div className=" text-2xl">임송하</div>
           </div>
+          {/* <div>우리 결혼 합니다.</div> */}
 
           {/* //ANCHOR - 사진 넣는 부분 */}
           <div className="flex justify-center p-2">
-            <div className="w-full h-[460px] bg-gray-100"></div>
+            <div className="w-full h-[460px] bg-gray-100">
+              <img className="img-filter" src={mainImg} alt="" />
+            </div>
           </div>
 
           <div className="space-y-1 text-gray-600 mt-8">
