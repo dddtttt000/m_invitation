@@ -23,7 +23,7 @@ const App = () => {
           {/* <div>우리 결혼 합니다.</div> */}
 
           {/* //ANCHOR - 사진 넣는 부분 */}
-          <img className="mt-4" src={frontImg} alt="" />
+          <img className="mt-2" src={frontImg} alt="" />
           <div className="flex justify-center items-center my-8 gap-6 nanum-myeongjo-regular">
             <div className="text-2xl w-full text-right">Selin</div>
             <div className=" font-semibold w-10">&</div>
