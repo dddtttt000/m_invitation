@@ -13,6 +13,9 @@ import calendar from "./assets/calendar.png"
 import frontImg from "./assets/main_01.png"
 import rearImg from "./assets/IMG_3621.png"
 import middleImg from "./assets/mid.png"
+import copyIcon from "./assets/copy.png"
+import { CopyToClipboard } from "react-copy-to-clipboard"
+
 const App = () => {
   const navermaps = useNavermaps()
 
@@ -176,9 +179,15 @@ const App = () => {
                   신랑측
                 </AccordionSummary>
                 <AccordionDetails>
-                  <div className="text-left flex justify-between">
-                    <div>계좌번호</div>
-                    <div>복사</div>
+                  <div className="text-left flex justify-between items-center">
+                    <div>농협 207176-51-025844 남기수</div>
+                    <CopyToClipboard
+                      text="20717651025844"
+                      // onCopy={(e) => console.log("copy", e)}
+                    >
+                      {/* <span className="text-sm border"></span> */}
+                      <img src={copyIcon} alt="" className="w-5 h-5" />
+                    </CopyToClipboard>
                   </div>
                 </AccordionDetails>
               </Accordion>
@@ -192,9 +201,15 @@ const App = () => {
                   신부측
                 </AccordionSummary>
                 <AccordionDetails>
-                  <div className="text-left flex justify-between">
-                    <div>계좌번호</div>
-                    <div onClick={(e) => console.log(e)}>복사</div>
+                  <div className="text-left flex justify-between items-center">
+                    <div>국민 361-24-0054-834 임광옥</div>
+                    <CopyToClipboard
+                      text="361240054834"
+                      // onCopy={(e) => console.log("copy", e)}
+                    >
+                      {/* <span>국민은행 361-24-0054-834 임광옥</span> */}
+                      <img src={copyIcon} alt="" className="w-5 h-5" />
+                    </CopyToClipboard>
                   </div>
                 </AccordionDetails>
               </Accordion>
