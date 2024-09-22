@@ -26,6 +26,7 @@ const App = () => {
           {/* <div>우리 결혼 합니다.</div> */}
 
           {/* //ANCHOR - 사진 넣는 부분 */}
+
           <img className="mt-2" src={frontImg} alt="" />
           <div className="flex justify-center items-center my-8 gap-6 nanum-myeongjo-regular">
             <div className="text-2xl w-full text-right">Selin</div>
@@ -99,7 +100,10 @@ const App = () => {
           {/* <div className=" text-[#0E13E5] font-semibold ">오시는 길</div> */}
           <div className="pt-6">
             <div>웨딩 스퀘어 4층, 그레이스 홀</div>
-            <div className="text-sm mt-2">서울 광진구 광나루로56길 85</div>
+            <div className="text-sm mt-2">
+              서울 광진구 광나루로56길 85 (강변테크노마트)
+            </div>
+            {/* <div className="text-sm mt-2">(강변역 테크노마트)</div> */}
             <div className="text-sm mt-4">TEL. 02-3424-7000</div>
             <div className="flex justify-center">
               <div id="map" className="p-6 pb-0 h-[400px] w-[400px] mt-8">
@@ -180,15 +184,19 @@ const App = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <div className="text-left flex justify-between items-center">
-                    <div>농협 207176-51-025844 남기수</div>
-                    <CopyToClipboard
-                      text="20717651025844"
-                      // onCopy={(e) => console.log("copy", e)}
-                    >
-                      {/* <span className="text-sm border"></span> */}
+                    <div>농협 207176-51-025844</div>
+                    <CopyToClipboard text="20717651025844">
                       <img src={copyIcon} alt="" className="w-5 h-5" />
                     </CopyToClipboard>
                   </div>
+                  <div className="text-left">남기수</div>
+                  <div className="text-left flex justify-between items-center mt-4">
+                    <div>국민 375302-04-212446</div>
+                    <CopyToClipboard text="37530204212446">
+                      <img src={copyIcon} alt="" className="w-5 h-5" />
+                    </CopyToClipboard>
+                  </div>
+                  <div className="text-left">남세린</div>
                 </AccordionDetails>
               </Accordion>
               <Accordion>
@@ -202,15 +210,19 @@ const App = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <div className="text-left flex justify-between items-center">
-                    <div>국민 361-24-0054-834 임광옥</div>
-                    <CopyToClipboard
-                      text="361240054834"
-                      // onCopy={(e) => console.log("copy", e)}
-                    >
-                      {/* <span>국민은행 361-24-0054-834 임광옥</span> */}
+                    <div>국민 361-24-0054-834</div>
+                    <CopyToClipboard text="361240054834">
                       <img src={copyIcon} alt="" className="w-5 h-5" />
                     </CopyToClipboard>
                   </div>
+                  <div className="text-left">임광옥</div>
+                  <div className="text-left flex justify-between items-center mt-4">
+                    <div>신한 110-354-034040</div>
+                    <CopyToClipboard text="110354034040">
+                      <img src={copyIcon} alt="" className="w-5 h-5" />
+                    </CopyToClipboard>
+                  </div>
+                  <div className="text-left">임송하</div>
                 </AccordionDetails>
               </Accordion>
             </div>
