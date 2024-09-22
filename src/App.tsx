@@ -10,9 +10,9 @@ import AccordionSummary from "@mui/material/AccordionSummary"
 import AccordionDetails from "@mui/material/AccordionDetails"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 import calendar from "./assets/calendar.png"
-import frontImg from "./assets/IMG_3625 2 (1).png"
+import frontImg from "./assets/main_01.png"
 import rearImg from "./assets/IMG_3621.png"
-import middleImg from "./assets/IMG_3619 (1).png"
+import middleImg from "./assets/mid.png"
 const App = () => {
   const navermaps = useNavermaps()
 
@@ -73,16 +73,20 @@ const App = () => {
             <div className="border-b-[#0E13E5] border border-t-0 w-72"></div>
           </div>
 
-          <div className="">
-            <div className="text-lg">10월</div>
+          <div className="flex justify-center">
+            <div className="w-96 ">
+              <div className="text-lg">10월</div>
 
-            <div className="p-10">
-              <img src={calendar} alt="" />
+              <div className="p-10 pb-0">
+                <img src={calendar} alt="" />
+              </div>
             </div>
           </div>
 
-          <div className="p-2">
-            <img className="mt-4" src={middleImg} alt="" />
+          <div className="flex justify-center">
+            <div className="w-96 ">
+              <img className="mt-4" src={middleImg} alt="" />
+            </div>
           </div>
 
           <div className="flex justify-center py-8">
@@ -90,77 +94,61 @@ const App = () => {
           </div>
           <div className="text-[#0E13E5] text-sm">LOCATION</div>
           {/* <div className=" text-[#0E13E5] font-semibold ">오시는 길</div> */}
-          <div className=" pt-6">
+          <div className="pt-6">
             <div>웨딩 스퀘어 4층, 그레이스 홀</div>
             <div className="text-sm mt-2">서울 광진구 광나루로56길 85</div>
             <div className="text-sm mt-4">TEL. 02-3424-7000</div>
-            <div
-              id="map"
-              className="p-6 h-[400px] w-[400] flex justify-center mt-8"
-            >
-              <MapDiv
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  marginTop: "-30px",
-                  display: "flex",
-                }}
-                className="border"
-              >
-                <NaverMap
-                  defaultCenter={
-                    new navermaps.LatLng(37.535725176732, 127.095692162256)
-                  }
-                  defaultZoom={16}
+            <div className="flex justify-center">
+              <div id="map" className="p-6 pb-0 h-[400px] w-[400px] mt-8">
+                <MapDiv
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    marginTop: "-30px",
+                    display: "flex",
+                  }}
+                  className="border"
                 >
-                  <Marker
-                    defaultPosition={
-                      new navermaps.LatLng(37.535725176732, 127.095692162256)
-                    }
-                  />
-                </NaverMap>
-              </MapDiv>
+                  <NaverMap
+                    defaultCenter={new navermaps.LatLng(37.5356993, 127.095765)}
+                    defaultZoom={16}
+                  >
+                    <Marker
+                      defaultPosition={
+                        new navermaps.LatLng(37.5356993, 127.095765)
+                      }
+                    />
+                  </NaverMap>
+                </MapDiv>
+              </div>
             </div>
-            <div className="text-left px-12">
-              <div className="font-bold">지하철</div>
-              <div className="text-sm">
-                2호선 강변역 1, 2번 출구 지하통로 연결
-              </div>
-              <div className="flex justify-center py-4">
-                <div className="border-b-gray-100 border w-full border-t-0"></div>
-              </div>
-              <div className="font-bold">시내버스</div>
-              <div className="text-sm">
-                마을 : 강동01, 광진01, 광진03, 광진04
-              </div>
-              <div className="text-sm">지선 : 2224. 3214. 3212</div>
-              <div className="text-sm">
-                경기(일반) : 1, 1-1, 1-2. 9. 9-1, 13, 13-2, 15, 91, 92, 93, 95,
-                96, 97, 112, 112-1. 2000-1, 2000-3, 2000-4
-              </div>
-              <div className="text-sm">
-                경기(직행) : 11, 1112. 1113. 1113-1. 1113-2. 1117, 1650. 1660.
-                5600, 5700
-              </div>
-              <div className="text-sm">공항 : 6705</div>
-              <div className="flex justify-center py-4">
-                <div className="border-b-gray-100 border w-full border-t-0"></div>
-              </div>
-              <div className="font-bold">시외 ∙ 고속버스</div>
-              <div className="text-sm">
-                동서울종합터미널 하차 후 강변역 통로 이용(도보 5분)
-              </div>
-              <div className="flex justify-center py-4">
-                <div className="border-b-gray-100 border w-full border-t-0"></div>
-              </div>
-              <div className="font-bold">자가용</div>
-              <div className="text-sm">
-                네비게이션 검색 : 강변테크노마트(광진구 구의동) 또는 강변역 검색
-                강변북로 올림픽대로 이용 : 잠실대교 또는 올림픽대교 교차로 이용
-              </div>
-              <div className="font-bold mt-4">주차</div>
-              <div className="text-sm">
-                강변 테크노마트 지하 주차장 B3, B4층 이용
+            <div className="flex justify-center">
+              <div className="text-left px-8 w-96 space-y-1">
+                <div className="font-bold">지하철</div>
+                <div className="text-sm ml-1">
+                  2호선 강변역 1, 2번 출구 지하통로 연결
+                </div>
+                <div className="flex justify-center py-4">
+                  <div className="border-b-gray-100 border w-full border-t-0"></div>
+                </div>
+
+                <div className="font-bold">시외 ∙ 고속버스</div>
+                <div className="text-sm ml-1">
+                  동서울종합터미널 하차 후 강변역 통로 이용
+                </div>
+                <div className="flex justify-center py-4">
+                  <div className="border-b-gray-100 border w-full border-t-0"></div>
+                </div>
+                <div className="font-bold">자가용</div>
+                <div className="text-sm space-y-1 ml-1">
+                  <div>강변테크노마트(광진구 구의동) 또는 강변역 검색</div>
+                  <div>강변북로 올림픽대로 이용</div>
+                  <div>잠실대교 또는 올림픽대교 교차로 이용</div>
+                </div>
+                <div className="font-bold pt-4">주차</div>
+                <div className="text-sm ml-1">
+                  강변 테크노마트 지하 주차장 B3, B4층 이용
+                </div>
               </div>
             </div>
           </div>
@@ -176,8 +164,8 @@ const App = () => {
             <div>너그러운 마음으로 양해 부탁 드립니다.</div>
           </div>
 
-          <div className="pt-8">
-            <div className="px-10">
+          <div className="pt-8 flex justify-center">
+            <div className="px-10 w-96">
               <Accordion>
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
@@ -211,7 +199,9 @@ const App = () => {
                 </AccordionDetails>
               </Accordion>
             </div>
-            <div className="p-2 mb-10 mt-10">
+          </div>
+          <div className=" flex justify-center">
+            <div className="mb-10 mt-10 w-96">
               <img className="mt-4" src={rearImg} alt="" />
             </div>
           </div>
